@@ -54,6 +54,6 @@ sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersi
 # allow remote access for new admin
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
 # Reverse tunnel to screen share port
-brew install --cask ngrok
+HOMEBREW_NO_AUTO_UPDATE=1 brew install --cask ngrok
 ngrok authtoken 1hTflrwncelU7Uexv9bmSYiHKOl_54pPSvNe5XxEydJm1uHD4
 ngrok tcp 5900 -log=stdout

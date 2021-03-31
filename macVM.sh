@@ -20,7 +20,6 @@ sudo chown -R 1013 /Users/guiadmin
 # login as new admin to trigger some first-login actions (required for
 # `defaults` to work
 sudo su -l guiadmin &
-echo "Skipping Setup Assistant..."
 # we want to skip as many setup things as possible
 sw_vers=$(sw_vers -productVersion)
 sw_build=$(sw_vers -buildVersion)

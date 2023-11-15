@@ -1,3 +1,5 @@
+set -v
+
 alias sudo="$(which sudo) -n"
 
 # disable spotlight indexing

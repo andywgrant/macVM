@@ -1,3 +1,5 @@
+alias sudo="$(which sudo) -n"
+
 # disable spotlight indexing
 echo "Disabling Spotlight indexing..."
 sudo mdutil -i off -a

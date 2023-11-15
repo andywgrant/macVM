@@ -19,42 +19,40 @@ sudo mkdir -p /Users/guiadmin/Library/Preferences
 sudo chown -R 1013 /Users/guiadmin
 # login as new admin to trigger some first-login actions (required for
 # `defaults` to work
-sudo su -l guiadmin
+sudo su -l guiadmin &
 # we want to skip as many setup things as possible
 sw_vers=$(sw_vers -productVersion)
 sw_build=$(sw_vers -buildVersion)
-defaults write com.apple.SetupAssistant.managed SkipAppearance -bool true
-defaults write com.apple.SetupAssistant.managed SkipCloudSetup -bool true
-defaults write com.apple.SetupAssistant.managed SkipiCloudStorageSetup -bool true
-defaults write com.apple.SetupAssistant.managed SkipPrivacySetup -bool true
-defaults write com.apple.SetupAssistant.managed SkipSiriSetup -bool true
-defaults write com.apple.SetupAssistant.managed SkipTrueTone -bool true
-defaults write com.apple.SetupAssistant.managed SkipScreenTime -bool true
-defaults write com.apple.SetupAssistant.managed SkipTouchIDSetup -bool true
-defaults write com.apple.SetupAssistant.managed SkipFirstLoginOptimization -bool true
-defaults write com.apple.SetupAssistant.managed DidSeeCloudSetup -bool true
-defaults write com.apple.SetupAssistant.managed LastPrivacyBundleVersion "2"
-defaults write com.apple.SetupAssistant.managed LastSeenCloudProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant.managed LastSeenDiagnosticsProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant.managed LastSeenSiriProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant.managed LastSeenBuddyBuildVersion "${sw_build}"      
-defaults write com.apple.SetupAssistant SkipAppearance -bool true
-defaults write com.apple.SetupAssistant SkipCloudSetup -bool true
-defaults write com.apple.SetupAssistant SkipiCloudStorageSetup -bool true
-defaults write com.apple.SetupAssistant SkipPrivacySetup -bool true
-defaults write com.apple.SetupAssistant SkipSiriSetup -bool true
-defaults write com.apple.SetupAssistant SkipTrueTone -bool true
-defaults write com.apple.SetupAssistant SkipScreenTime -bool true
-defaults write com.apple.SetupAssistant SkipTouchIDSetup -bool true
-defaults write com.apple.SetupAssistant SkipFirstLoginOptimization -bool true
-defaults write com.apple.SetupAssistant DidSeeCloudSetup -bool true
-defaults write com.apple.SetupAssistant LastPrivacyBundleVersion "2"
-defaults write com.apple.SetupAssistant LastSeenCloudProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant LastSeenDiagnosticsProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant LastSeenSiriProductVersion "${sw_vers}"
-defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"      
-# exit guiadmin shell
-exit
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipAppearance -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipCloudSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipiCloudStorageSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipPrivacySetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipSiriSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipTrueTone -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipScreenTime -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipTouchIDSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed SkipFirstLoginOptimization -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed DidSeeCloudSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed LastPrivacyBundleVersion "2"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed LastSeenCloudProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed LastSeenDiagnosticsProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed LastSeenSiriProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant.managed LastSeenBuddyBuildVersion "${sw_build}"      
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipAppearance -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipCloudSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipiCloudStorageSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipPrivacySetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipSiriSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipTrueTone -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipScreenTime -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipTouchIDSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant SkipFirstLoginOptimization -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant DidSeeCloudSetup -bool true
+# sudo -u guiadmin defaults write com.apple.SetupAssistant LastPrivacyBundleVersion "2"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenCloudProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenDiagnosticsProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenSiriProductVersion "${sw_vers}"
+# sudo -u guiadmin defaults write com.apple.SetupAssistant LastSeenBuddyBuildVersion "${sw_build}"      
 
 # allow remote access for new admin
 echo "Enabling remote access..."
